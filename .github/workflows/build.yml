@@ -5,7 +5,7 @@ on:
 permissions:
   contents: read
 
-name: Clippy and build
+name: Just do build
 jobs:
   clippy:
     permissions:
@@ -33,6 +33,4 @@ jobs:
       - uses: actions/upload-artifact@v5
         with:
           name: mcman-${{ matrix.os }}
-          path: |
-            target/release/mcman*
-            !target/release/mcman.d
+          path: .
